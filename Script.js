@@ -2,12 +2,12 @@ const left = document.querySelector('.Arrow.left');
 const right = document.querySelector('.Arrow.right');
 const slider = document.querySelector('.slider');
 const image = document.querySelectorAll('.image');
-const length = image    .length;
+const length = image.length;
 let SlideNumber = 1;
 
 const nextSlide = () => {
     slider.style.transform = `translateX(-${SlideNumber * 800}px)`;
-    slider.style.transition = 'transform 0.5s ease-in-out'; 
+    slider.style.transition = 'transform 0.5s ease-in-out';
     SlideNumber++;
 };
 const getFirstSlide = () => {
@@ -16,7 +16,7 @@ const getFirstSlide = () => {
     SlideNumber = 1;
 };
 const prevslide = () => {
-    
+
     slider.style.transform = `translateX(-${(SlideNumber - 1) * 800}px)`;
     slider.style.transition = 'transforms 0.5s ease-in-out';
     SlideNumber--;
@@ -43,3 +43,11 @@ right.addEventListener('click', () => {
         getLastSlide();
     }
 });
+
+const bottom = document.querySelector('.bottom');
+
+for (let i = 0; i < length; i++){
+    const div = document.createElement('div');
+    div.className = 'button';
+    bottom.appendChild(button);
+}

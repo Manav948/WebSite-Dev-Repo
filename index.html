@@ -117,7 +117,13 @@
             justify-content: center;
             gap: 20px;
             margin-top: 5%;
-
+            flex-direction: column;
+        }
+        .top{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
         }
 
         .Arrow.right{
@@ -157,6 +163,17 @@
             width: 800px;
             object-fit: cover;
         }
+        .button{
+            height: 20px;
+            width: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .bottom{
+            display: flex;
+            gap: 20px;
+        }
     </style>
 </head>
 
@@ -175,6 +192,7 @@
         </div>
     </header><!--header end-->
     <div class="container">
+        <div class="top">
         <img src="A1.png" class="Arrow right">
         <div class="frame">
             <div class="slider">
@@ -187,6 +205,10 @@
             </div><!--slider end-->
         </div><!--frame end-->
         <img src="A1.png" class="Arrow left">
+        </div><!--Top end-->
+        <div class="bottom">
+            
+        </div>
     </div><!--container end-->
     <script src="Script.js"></script>
 </body>
