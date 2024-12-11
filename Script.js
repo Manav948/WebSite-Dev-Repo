@@ -15,8 +15,10 @@ for (let i = 0; i < length; i++) {
 const buttons = document.querySelectorAll('.button');
 buttons[0].style.backgroundColor = 'white';
 
-const resetBg = () =>{
-    buttons.forEach((button) =>{
+const resetBg = () => {
+    buttons.forEach((button) => {
+        button.addEventListener('mouseover', ClearSlideshow);
+        button.addEventListener('mouseout', slideshow);
         button.style.backgroundColor = 'transparent';
     });
 };
@@ -30,9 +32,9 @@ buttons.forEach((button, i) => {
     });
 });
 
-const changecolor = () =>{
+const changecolor = () => {
     resetBg();
-    buttons[SlideNumber -1].style.backgroundColor = 'white';
+    buttons[SlideNumber - 1].style.backgroundColor = 'white';
 };
 
 
@@ -77,3 +79,28 @@ right.addEventListener('click', () => {
     changecolor();
 });
 
+let sliderInterval;
+const slideshow = () => {
+    sliderInterval = setInterval(() => {
+        if (SlideNumber < length) {
+            nextSlide();
+        }
+        else {
+            getFirstSlide();
+        }
+        changecolor();
+    }, 2000);
+};
+
+slideshow();
+
+const ClearSlideshow = () => {
+    clearInterval(sliderInterval);
+};
+
+slider.addEventListener('mouseover', ClearSlideshow);
+slider.addEventListener('mouseout', slideshow);
+right.addEventListener('mouseover', ClearSlideshow);
+right.addEventListener('mouseout', slideshow);
+left.addEventListener('mouseover', ClearSlideshow);
+left.addEventListener('mouseout', slideshow);
