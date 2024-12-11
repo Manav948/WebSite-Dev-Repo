@@ -43,19 +43,3 @@ right.addEventListener('click', () => {
         getLastSlide();
     }
 });
-
-const bottom = document.querySelector('.bottom');
-<<<<<<< HEAD
-
-for (let i = 0; i < length; i++){
-    const div = document.createElement('div');
-    div.className = 'button';
-    bottom.appendChild(button);
-}
-=======
-for(let i =0;i<length;i++){
-    const div = document.createElement('div');
-    div.className = 'button';
-    bottom.appendChild(div);
-};
->>>>>>> 0c47b7c65b78a353f8459cddafde566435e82f01
