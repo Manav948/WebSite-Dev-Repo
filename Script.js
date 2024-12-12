@@ -50,7 +50,7 @@ const getFirstSlide = () => {
 };
 const prevslide = () => {
 
-    slider.style.transform = `translateX(-${(SlideNumber - 1) * 800}px)`;
+    slider.style.transform = `translateX(-${(SlideNumber - 2) * 800}px)`;
     slider.style.transition = 'transforms 0.5s ease-in-out';
     SlideNumber--;
 };
